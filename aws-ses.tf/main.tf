@@ -8,10 +8,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "training-ses-tfstate"
+    bucket  = "training-dev-tfstate"
     region  = "ap-northeast-1"
     profile = "terraformer"
-    key     = "terraform.tfstate"
+    key     = "ses/terraform.tfstate"
     encrypt = true
   }
 }

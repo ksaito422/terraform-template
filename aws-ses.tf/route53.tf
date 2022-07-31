@@ -1,5 +1,5 @@
 data "aws_route53_zone" "host_zone" {
-  zone_name = local.domain_name
+  name = local.domain_name
 }
 
 resource "aws_route53_record" "ses_record" {

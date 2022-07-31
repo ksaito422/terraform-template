@@ -9,9 +9,9 @@ terraform {
   }
   backend "s3" {
     bucket  = "training-dev-tfstate"
+    key     = "ec2/terraform.tfstate"
     region  = "ap-northeast-1"
     profile = "terraformer"
-    key     = "terraform.tfstate"
     encrypt = true
   }
 }

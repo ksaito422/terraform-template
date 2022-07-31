@@ -74,7 +74,7 @@ resource "aws_cloudfront_distribution" "static-www" {
     }
   }
 
-  aliases = ["${var.site_domain}"]
+  aliases = ["${local.site_domain}"]
 
   viewer_certificate {
     # cloudfront_default_certificate = true
