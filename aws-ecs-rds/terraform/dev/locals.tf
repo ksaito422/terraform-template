@@ -11,7 +11,7 @@ locals {
   log_group_bastion  = "/aws/ecs/bastion"
   # cloudfrontのマネージドキャッシュポリシー
   caching_disabled = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
-  
+
   # alb
   api = {
     usage                      = "api"
@@ -32,7 +32,7 @@ locals {
       }
     ]
   }
-  
+
   # ecs
   sg_port_rules_ecs = [
     {
@@ -46,7 +46,7 @@ locals {
       cidr_blocks = [module.vpc.vpc_cidr_block]
     }
   ]
-  
+
   # iam user
   cloud_front = {
     user_name = "cloudfront-deploy"
@@ -54,7 +54,7 @@ locals {
   app = {
     user_name = "app-deploy"
   }
-  
+
   # rds
   db_port = 3306
   sg_port_rules_rds = [
@@ -64,7 +64,7 @@ locals {
       cidr_blocks = [module.vpc.vpc_cidr_block]
     }
   ]
-  
+
   # waf
   body_size_constrains_byte = 10 * 1024 * 1024
 }

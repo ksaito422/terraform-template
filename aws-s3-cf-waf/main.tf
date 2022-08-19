@@ -22,7 +22,7 @@ provider "aws" {
   region  = "ap-northeast-1"
   default_tags {
     tags = local.default_tags
-  } 
+  }
 }
 
 # cloudfront用
@@ -31,5 +31,5 @@ provider "aws" {
   alias  = "virginia"
   default_tags {
     tags = local.default_tags
-  } 
+  }
 }
